@@ -1,0 +1,36 @@
+button {
+    width: 100%;
+}
+
+
+.main-container {
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.algo {
+    background-color: paleturquoise;
+}
+
+#question {
+    width: 40vw;
+}
+
+form>div {
+    /* width: 100%; */
+}
+
+#question-amount {
+    /* background-color: yellow;
+    border-radius: 50%; */
+    top: -0.7rem;
+    /* distance from top */
+    right: -0.7rem;
+    /* distance from right */
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
