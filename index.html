@@ -8,7 +8,7 @@
       name="description"
       content="This is an app to anotate question, and then the app randomly show them to you in order to answer them"
     />
-    <title>QuesDom</title>
+    <title>Quesdom</title>
     <!-- // TODO: Look up a favicon -->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -17,40 +17,72 @@
   </head>
   <body>
     <div
-      class="container d-flex align-items-center justify-content-center main-container"
+      class="container d-flex align-items-center justify-content-center main-container position-relative"
     >
       <div class="algo py-2 px-5 rounded-5">
-        <h1 class="mb-5 mt-3 text-center">Quesdom</h1>
-        <form>
-          <div class="row mb-3 position-relative">
-            <span id="question-amount" class="position-absolute rounded-circle bg-warning text-dark">0</span>
-            <label for="question" class="visually-hidden"></label>
-            <textarea
-              type="text"
-              class="form-control col-12"
-              id="question"
-              name="question"
-              placeholder="Write your question"
-              rows="3"
-            ></textarea>
-          </div>
-          <div class="row mb-3">
-            <div id="add" class="col">
-              <button class="btn btn-primary">Add</button>
+        <div id="add-question" class="d-none">
+          <p class="mb-4 mt-3 text-center h1">Quesdom</p>
+          <form>
+            <div class="row mb-4 position-relative">
+              <span
+                id="question-amount"
+                class="position-absolute rounded-circle bg-warning text-dark circle"
+                >0</span
+              >
+              <label for="question-control" class="visually-hidden"></label>
+              <textarea
+                type="text"
+                class="form-control col-12"
+                id="question-control"
+                name="question"
+                placeholder="Write your question"
+                rows="3"
+              ></textarea>
             </div>
-            <div id="start" class="col">
-              <button class="btn btn-success">Start</button>
-            </div>
+            <div class="row gy-3 mb-3">
+              <div class="col">
+                <button id="add" class="btn btn-primary">Add</button>
+              </div>
 
-            <div id="reset" class="col">
-              <button class="btn btn-danger">Reset</button>
-            </div>
+              <div class="col">
+                <button id="start" class="btn btn-success">Start</button>
+              </div>
 
-            <div id="configure" class="col">
-              <button class="btn btn-dark">Settings</button>
+              <div class="col">
+                <button id="reset-add" class="btn btn-danger">Reset</button>
+              </div>
+
+              <div class="col">
+                <button id="configure" class="btn btn-dark">Settings</button>
+              </div>
             </div>
+          </form>
+        </div>
+
+        <div id="show-question" class="d-nonez">
+          <div class="position-relative mb-3 mt-3 ">
+            <span
+              id="questions-left"
+              class="position-absolute rounded-circle bg-warning text-dark circle"
+              >5</span
+            >
+            <p class="h1">Question:</p>
           </div>
-        </form>
+          <p id="question-paragraph" class="mb-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolore
+            earum iusto voluptas commodi accusantium, sit assumenda labore magni
+            tempora repellat ipsam odit dolores, eum veritatis ducimus delectus
+            similique? Aliquam.
+          </p>
+          <div class="d-flex justify-content-around align-items-center mb-3">
+            <span id="timer" class="preparation py-1 px-3 rounded-5"
+              >09:25</span
+            >
+            <button id="next-show" class="btn btn-success px-4">Next</button>
+          </div>
+
+          <button id="reset-show" class="btn btn-danger">Reset</button>
+        </div>
       </div>
     </div>
   </body>

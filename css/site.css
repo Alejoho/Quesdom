@@ -1,4 +1,4 @@
-button {
+form button {
     width: 100%;
 }
 
@@ -10,27 +10,53 @@ button {
 
 .algo {
     background-color: paleturquoise;
+    width: 80%;
+}
+
+@media screen and (max-width: 500px) {
+    .algo {
+        width: 100%;
+    }
 }
 
 #question {
     width: 40vw;
 }
 
-form>div {
-    /* width: 100%; */
+#question-amount {
+    top: -0.7rem;
+    right: -0.7rem;
 }
 
-#question-amount {
-    /* background-color: yellow;
-    border-radius: 50%; */
-    top: -0.7rem;
-    /* distance from top */
-    right: -0.7rem;
-    /* distance from right */
+#questions-left {
+    top: -12px;
+    right: -38px;
+}
+
+.circle {
     width: 2rem;
     height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+}
+
+#reset-show {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#timer {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.preparation {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.answer {
+    background-color: rgba(255, 0, 0, 0.635);
 }
